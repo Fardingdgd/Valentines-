@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valentine's Quiz</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+
+    #text {
+      font-size: 20px;
+      margin: 20px;
+    }
+
+    #gif {
+      width: 300px;
+      height: 200px;
+      margin: 20px;
+    }
+
+    button {
+      padding: 10px;
+      font-size: 16px;
+      margin: 10px;
+      border: none;
+      border-radius: 15px;
+      cursor: pointer;
+      transition: transform 0.5s;
+    }
+
+    #no {
+      background-color: lightpink;
+      color: white;
+    }
+
+    #yes {
+      background-color: lightgreen;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="text">Hey LUCY!! do you want to be mu valentines pookie?</div>
+  <img id="gif" src="https://gifdb.com/images/high/cute-love-bear-roses-ou7zho5oosxnpo6k.gif" alt=Valentine's GIF">
+  <button id="no" onclick="handleNo()">No</button>
+  <button id="yes" onclick="handleYes()">Yes</button>
+
+  <script>
+    let noCount = 0;
+
+    function handleNo() {
+      noCount++;
+      if (noCount === 1) {
+        document.getElementById("no").innerText = "Are you sure?";
+      } else if (noCount === 2) {
+        document.getElementById("no").innerText = "Lucy comeonn now, Really?";
+      } else if (noCount === 3) {
+        document.getElementById("no").innerText = "Lulu Last chance!🙄";
+      } else  if (noCount ===4) {
+        
+document.getElementById("no").innerText = "ok whatever😑";
+      } else  if (noCount ===5) {           document.getElementById("no").innerText="Haha Jk, comonn baby I'm sorry for last night click yes PLEASEEE"
+      } else if (noCount ===6) {
+        
+      }else{document.getElementById("no").style.display = "none";
+        document.getElementById("yes").innerText = "just say Yes please my princess☹️";
+        document.getElementById("yes").style.transform = "scale(2)";
+      }
+    }
+
+    function handleYes() {
+      const loveWindow = window.open("", "LoveWindow", "width=400, height=300");
+      loveWindow.document.write(`
+        <html lang="en">
+          <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Love Window</title>
+          </head>
+          <body style="background-color: #ffe6e6; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+            <h1 style="color: #ff0066; font-size: 24px;">OMG, I love you!</h1>
+            <img src="https://media4.giphy.com/media/1JmGiBtqTuehfYxuy9/giphy.gif?cid=6c09b952tgnpxw24qgy3mu0e0k1evhpa7790bzeila55q9vz&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=g " alt="Love GIF" style="width: 200px; height: 150px; margin-top: 20px;">
+          </body>
+        </html>
+      `);
+    }
+  </script>
+</body>
+
+</html>
